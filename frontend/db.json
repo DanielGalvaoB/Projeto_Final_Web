@@ -1,0 +1,31 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "sku": "CFC-001",
+      "nome": "Café Especial Grão 250g",
+      "quantidade": 35,
+      "precoVenda": 28.50,
+      "precoCusto": 18.00,
+      "estoqueBaixo": 10
+    },
+    {
+      "id": 2,
+      "sku": "BLN-015",
+      "nome": "Bolo de Laranja Caseiro",
+      "quantidade": 8,
+      "precoVenda": 15.00,
+      "precoCusto": 7.50,
+      "estoqueBaixo": 5
+    },
+    {
+      "id": 3,
+      "sku": "SGL-003",
+      "nome": "Salgado de Frango com Catupiry",
+      "quantidade": 4,
+      "precoVenda": 8.00,
+      "precoCusto": 3.00,
+      "estoqueBaixo": 12
+    }
+  ]
+}
