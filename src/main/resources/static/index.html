@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Estoque</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        h2 { margin-top: 40px; }
+        form { margin-bottom: 20px; }
+        label { display: block; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<h1>Controle de Estoque</h1>
+
+<!-- Criar Usuário -->
+<section>
+    <h2>Criar Usuário</h2>
+    <form method="post" action="http://localhost:8080/funcionarios">
+        <label>Nome: <input type="text" name="nome" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Senha: <input type="password" name="senha" required></label>
+        <label>Perfil:
+            <select name="perfil" required>
+                <option value="ADMIN">ADMIN</option>
+                <option value="FUNCIONARIO">FUNCIONARIO</option>
+            </select>
+        </label>
+        <button type="submit">Criar Usuário</button>
+    </form>
+</section>
+
+<!-- Criar Produto -->
+<section>
+    <h2>Criar Produto</h2>
+    <form method="post" action="http://localhost:8080/produtos">
+        <label>Nome: <input type="text" name="nome" required></label>
+        <label>Descrição: <input type="text" name="descricao"></label>
+        <label>Preço: <input type="number" step="0.01" name="preco" required></label>
+        <label>Quantidade: <input type="number" name="quantidade" required></label>
+        <label>Tipo:
+            <select name="tipoProduto" required>
+                <option value="ALIMENTO">ALIMENTO</option>
+                <option value="LIMPEZA">LIMPEZA</option>
+                <option value="ELETRONICO">ELETRONICO</option>
+            </select>
+        </label>
+        <button type="submit">Criar Produto</button>
+    </form>
+</section>
+
+<!-- Registrar Movimentação -->
+<section>
+    <h2>Registrar Movimentação</h2>
+    <form method="post" action="http://localhost:8080/movimentacoes">
+        <label>Usuário ID: <input type="number" name="usuarioId" required></label>
+        <label>Produto ID: <input type="number" name="produtoId" required></label>
+        <label>Quantidade: <input type="number" name="quantidade" required></label>
+        <label>Tipo:
+            <select name="tipo" required>
+                <option value="ENTRADA">ENTRADA</option>
+                <option value="SAIDA">SAIDA</option>
+            </select>
+        </label>
+        <button type="submit">Registrar</button>
+    </form>
+</section>
+
+<!-- Links simples para GET -->
+<section>
+    <h2>Visualizar dados</h2>
+    <ul>
+        <li><a href="http://localhost:8080/funcionarios" target="_blank">Listar Usuários</a></li>
+        <li><a href="http://localhost:8080/produtos" target="_blank">Listar Produtos</a></li>
+        <li><a href="http://localhost:8080/movimentacoes" target="_blank">Listar Movimentações</a></li>
+    </ul>
+</section>
+</body>
+</html>
